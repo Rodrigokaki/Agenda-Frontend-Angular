@@ -2,7 +2,7 @@ export interface Contact {
     id: Number,
     name: string,
     age: Number,
-    gender: string,
+    gender: Number,
     telephone: Number,
-    favorite: Boolean
+    favorite: Number
 }
