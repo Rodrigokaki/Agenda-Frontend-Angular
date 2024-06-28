@@ -47,4 +47,8 @@ export class RegisterComponent {
       favorite: ['']
     })
   }
+
+  save(){
+    this.contacts.push(this.formGroupContact.value)
+  }
 }
