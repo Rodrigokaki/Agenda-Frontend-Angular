@@ -63,6 +63,22 @@
       "telephone": "3232323",
       "favorite": true,
       "id": 8
+    },
+    {
+      "name": "",
+      "age": "",
+      "gender": "",
+      "telephone": "",
+      "favorite": true,
+      "id": 9
+    },
+    {
+      "name": "",
+      "age": "",
+      "gender": "",
+      "telephone": "",
+      "favorite": "",
+      "id": 10
     }
   ]
 }

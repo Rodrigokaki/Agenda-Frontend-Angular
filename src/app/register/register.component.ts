@@ -39,4 +39,13 @@ export class RegisterComponent implements OnInit{
       next: data => this.contacts.push(data)
     })
   }
+
+  edit(contact: Contact){
+
+  }
+  
+  delete(contact: Contact){
+
+  }
+
 }

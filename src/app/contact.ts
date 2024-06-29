@@ -4,5 +4,5 @@ export interface Contact {
     age: Number,
     gender: Number,
     telephone: Number,
-    favorite: Number
+    favorite: Boolean
 }

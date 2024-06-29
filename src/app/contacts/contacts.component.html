@@ -11,16 +11,55 @@
             <tr>
               <th scope="col">#</th>
               <th scope="col">Nome</th>
-              <th scope="col">Genero</th>
               <th scope="col">Telefone</th>
+              <th scope="col">Sexo</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let contact of contacts">
               <th scope="row">{{contact.id}}</th>
               <td>{{contact.name}}</td>
-              <td>{{contact.gender}}</td>
               <td>{{contact.telephone}}</td>
+              <td>
+                <div *ngIf="contact.gender == 1" class="pt-1">
+                  <span class="material-symbols-outlined">
+                    male
+                  </span>
+                </div>
+                <div *ngIf="contact.gender == 2" class="pt-1">
+                  <span class="material-symbols-outlined">
+                    female
+                  </span>
+                </div>
+                <div *ngIf="contact.gender == 3" class="pt-1">
+                  <span class="material-symbols-outlined">
+                    transgender
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div *ngIf="contact.favorite == true" class="pt-1 text-warning">
+                  <span class="material-symbols-outlined">
+                    star
+                  </span>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex gap-2 justify-content-end">
+                  <button class="btn btn-success p-1 d-flex" (click)="edit(contact)">
+                    <span class="material-symbols-outlined">
+                      edit
+                    </span>
+                  </button>
+                  <button class="btn btn-danger p-1 d-flex" (click)="delete(contact)">
+                    <span class="material-symbols-outlined">
+                      delete
+                    </span>
+                  </button>
+                </div>
+              </td>
             </tr>
           </tbody>
         </table>
