@@ -2,7 +2,7 @@
   "contacts": [
     {
       "id": 1,
-      "name": "Rodrigo",
+      "name": "Rodrigo2",
       "age": 23,
       "gender": 1,
       "telephone": 1231123112,
@@ -25,36 +25,12 @@
       "favorite": 0
     },
     {
-      "name": "",
-      "age": "",
-      "gender": "",
-      "telephone": "",
-      "favorite": "",
-      "id": 4
-    },
-    {
-      "name": "",
-      "age": "",
-      "gender": "",
-      "telephone": "",
-      "favorite": "",
-      "id": 5
-    },
-    {
       "name": "teste",
       "age": 34,
       "gender": 2,
       "telephone": "54545454545",
       "favorite": "",
       "id": 6
-    },
-    {
-      "name": "",
-      "age": "",
-      "gender": "",
-      "telephone": "",
-      "favorite": "",
-      "id": 7
     },
     {
       "name": "teste2",
@@ -73,12 +49,12 @@
       "id": 9
     },
     {
+      "id": 10,
       "name": "",
       "age": "",
       "gender": "",
       "telephone": "",
-      "favorite": "",
-      "id": 10
+      "favorite": ""
     }
   ]
 }

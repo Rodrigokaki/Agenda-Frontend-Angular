@@ -48,7 +48,7 @@
               </td>
               <td>
                 <div class="d-flex gap-2 justify-content-end">
-                  <button class="btn btn-success p-1 d-flex" (click)="edit(contact)">
+                  <button class="btn btn-success p-1 d-flex" [routerLink]="['/edit', contact.id]">
                     <span class="material-symbols-outlined">
                       edit
                     </span>

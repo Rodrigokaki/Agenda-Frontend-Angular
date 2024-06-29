@@ -68,7 +68,8 @@
             <label class="form-check-label" for="checkboxFavorite">Favorito</label>
         </div>
 
-        <button type="submit" class="btn btn-primary" (click)="save()">Salvar</button>
+        <button type="submit" class="btn btn-primary" (click)="save()" *ngIf="!isEditing">Salvar</button>
+        <button type="submit" class="btn btn-primary" (click)="update()" *ngIf="isEditing">Atualizar</button>
 
     </form>
 
