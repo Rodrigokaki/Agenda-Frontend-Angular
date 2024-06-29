@@ -1,33 +1,28 @@
-<body class="bg-dark text-light">
+<div class="col-8 m-auto">
 
-    
-    <div class="col-8 m-auto">
+      <h1 class="text-center my-5">Contatos</h1>
 
-        <h1 class="text-center my-5">Contatos</h1>
+      <div class="text-end">
+          <a type="button" class="btn btn-primary" routerLink="/register">+Novo contato</a>
+      </div>
+      
+      <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Genero</th>
+              <th scope="col">Telefone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let contact of contacts">
+              <th scope="row">{{contact.id}}</th>
+              <td>{{contact.name}}</td>
+              <td>{{contact.gender}}</td>
+              <td>{{contact.telephone}}</td>
+            </tr>
+          </tbody>
+        </table>
 
-        <div class="text-end">
-            <a type="button" class="btn btn-primary" routerLink="/register">+Novo contato</a>
-        </div>
-        
-        <table class="table table-dark table-striped">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Genero</th>
-                <th scope="col">Telefone</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let contact of contacts">
-                <th scope="row">{{contact.id}}</th>
-                <td>{{contact.name}}</td>
-                <td>{{contact.gender}}</td>
-                <td>{{contact.telephone}}</td>
-              </tr>
-            </tbody>
-          </table>
-
-    </div>
-
-</body>
+  </div>
