@@ -3,6 +3,7 @@ import { Contact } from '../contact';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../contact.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +18,7 @@ export class RegisterComponent implements OnInit{
 
   formGroupContact: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private service: ContactService, private router: Router){
+  constructor(private formBuilder: FormBuilder, private service: ContactService, private router: Router, private toastr: ToastrService){
     this.formGroupContact = formBuilder.group({
       id:[''],
       name: ['', [Validators.required, Validators.minLength(3)]],
@@ -47,7 +48,7 @@ export class RegisterComponent implements OnInit{
 
   save(){
     this.service.save(this.formGroupContact.value).subscribe({
-      next: data => this.contacts.push(data)
+      next: () => this.loadContacts()
     })
   }
   
@@ -83,6 +84,10 @@ export class RegisterComponent implements OnInit{
 
   get telephone(): any{
     return this.formGroupContact.get("telephone")
+  }
+
+  showToastrSuccess(){
+    this.toastr.success('Contato salvo!', 'Sucesso');
   }
 
 }
