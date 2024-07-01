@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit{
       age: [''],
       gender: [''],
       telephone: [''],
-      favorite: ['']
+      favorite: [false]
     })
   }
 
@@ -35,6 +35,8 @@ export class RegisterComponent implements OnInit{
         this.isEditing = true
         this.getContactById(url.split("/")[2])
       }
+
+
   }
 
   loadContacts(){
