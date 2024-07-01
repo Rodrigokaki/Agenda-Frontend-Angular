@@ -2,9 +2,21 @@
 
       <h1 class="text-center my-5">Contatos</h1>
 
-      <div class="text-end">
+      <div class="row">
+        <div class="col-3">
+          <form [formGroup]="fromGroupFilter">
+            <select class="form-select" id="filter" (change)="onChange()" formControlName="filter">
+              <option value="0">Filtro</option>
+              <option value="1">Favoritos</option>
+              <option value="2">Todos</option>
+            </select>
+          </form>
+        </div>
+        <div class="text-end col-9">
           <a type="button" class="btn btn-primary" routerLink="/register">+Novo contato</a>
+        </div>
       </div>
+      
       
       <table class="table table-dark table-striped">
           <thead>

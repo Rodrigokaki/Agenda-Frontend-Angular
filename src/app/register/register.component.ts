@@ -18,6 +18,8 @@ export class RegisterComponent implements OnInit{
 
   formGroupContact: FormGroup;
 
+  fromGroupFilter: FormGroup;
+
   constructor(private formBuilder: FormBuilder, private service: ContactService, private router: Router, private toastr: ToastrService){
     this.formGroupContact = formBuilder.group({
       id:[''],
@@ -26,6 +28,10 @@ export class RegisterComponent implements OnInit{
       gender: ['', [Validators.required]],
       telephone: ['', [Validators.required]],
       favorite: [false]
+    })
+
+    this.fromGroupFilter = formBuilder.group({
+      filter:['0']
     })
   }
 
@@ -49,7 +55,7 @@ export class RegisterComponent implements OnInit{
   save(){
     this.service.save(this.formGroupContact.value).subscribe({
       next: () => this.loadContacts()
-    })
+    })  
   }
   
   delete(contact: Contact){
