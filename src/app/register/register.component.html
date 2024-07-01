@@ -25,17 +25,26 @@
 
         <div class="row">
             <div class="mb-3 col-11">
-                <label for="inputName" class="form-label">Nome</label>
+                <label for="inputName" class="form-label">Nome*</label>
                 <input type="text" class="form-control" id="inputName" formControlName="name">
+                <small class="text-danger" *ngIf="name.hasError('required') && name.touched">
+                    * Esse campo é obrigatório
+                </small>
+                <small class="text-danger" *ngIf="name.hasError('minlength') && name.touched">
+                    * O nome deve conter pelo menos 3 caractéres
+                </small>
             </div>
             <div class="col-1">
-                <label for="inputAge" class="form-label">Idade</label>
+                <label for="inputAge" class="form-label">Idade*</label>
                 <input type="number" class="form-control" id="inputAge" formControlName="age">
+                <small class="text-danger" *ngIf="age.hasError('required') && age.touched">
+                    * Esse campo é obrigatório
+                </small>
             </div>
         </div>
 
         <div class="mb-3">
-            <label for="inputGender" class="form-label">Sexo</label>
+            <label for="inputGender" class="form-label">Sexo*</label>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="gender" id="flexRadioMale" [value]="1" formControlName="gender">
                 <label class="form-check-label" for="flexRadioMale">
@@ -54,12 +63,18 @@
                     Outro
                 </label>
             </div>
+            <small class="text-danger" *ngIf="gender.hasError('required') && telephone.touched">
+                * Esse campo é obrigatório
+            </small>
         </div>
 
         <div class="row">
             <div class="mb-3">
-                <label for="inputTelephone" class="form-label">Telefone</label>
+                <label for="inputTelephone" class="form-label">Telefone*</label>
                 <input type="text" class="form-control" id="inputTelephone" formControlName="telephone">
+                <small class="text-danger" *ngIf="telephone.hasError('required') && telephone.touched">
+                    * Esse campo é obrigatório
+                </small>
             </div>
         </div>
 

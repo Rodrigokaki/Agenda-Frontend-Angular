@@ -69,4 +69,20 @@ export class RegisterComponent implements OnInit{
     })
   }
 
+  get name(): any{
+    return this.formGroupContact.get("name")
+  }
+
+  get age(): any{
+    return this.formGroupContact.get("age")
+  }
+
+  get gender(): any{
+    return this.formGroupContact.get("gender")
+  }
+
+  get telephone(): any{
+    return this.formGroupContact.get("telephone")
+  }
+
 }
