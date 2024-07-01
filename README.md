@@ -10,13 +10,13 @@ Projeto final de linguagem de programações 4 - FATEC Itu
 
 ## Funções
 ### Filtro
-É possivel filtrar por contatos favoritados
+É possivel filtrar por contatos favoritados\
 ![Filtro](/src/assets/Filtro.png "Filtro")
 
 ### Botões rápidos
-Botões em cada contato para ações rápidas
+Botões em cada contato para ações rápidas\
 ![Botões](/src/assets/Botoes.png "Botões")
 
 ### Mensagens
-Mensagens para ajudar o usuário a preencher corretamente os campos obrigatórios
+Mensagens para ajudar o usuário a preencher corretamente os campos obrigatórios\
 ![Mensagem para validação](/src/assets/Validacoes.png "Mensagem para validação")
