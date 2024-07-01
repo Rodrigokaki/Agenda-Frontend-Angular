@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Contact } from '../contact';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../contact.service';
 import { Router } from '@angular/router';
 
@@ -20,10 +20,10 @@ export class RegisterComponent implements OnInit{
   constructor(private formBuilder: FormBuilder, private service: ContactService, private router: Router){
     this.formGroupContact = formBuilder.group({
       id:[''],
-      name: [''],
-      age: [''],
-      gender: [''],
-      telephone: [''],
+      name: ['', [Validators.required, Validators.minLength(3)]],
+      age: ['', [Validators.required]],
+      gender: ['', [Validators.required]],
+      telephone: ['', [Validators.required]],
       favorite: [false]
     })
   }
