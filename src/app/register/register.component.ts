@@ -42,8 +42,6 @@ export class RegisterComponent implements OnInit{
         this.isEditing = true
         this.getContactById(url.split("/")[2])
       }
-
-
   }
 
   loadContacts(){
@@ -54,7 +52,7 @@ export class RegisterComponent implements OnInit{
 
   save(){
     this.service.save(this.formGroupContact.value).subscribe({
-      next: () => this.loadContacts()
+      next: () => this.router.navigate([''])
     })  
   }
   
@@ -72,7 +70,7 @@ export class RegisterComponent implements OnInit{
 
   update(){
     this.service.edit(this.formGroupContact.value).subscribe({
-      next: () => this.loadContacts()
+      next: () => this.router.navigate([''])
     })
   }
 
